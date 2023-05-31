@@ -1,33 +1,33 @@
 
 
-public class NOde<T>{
+public class Node<T>{
     
-    T data; 
-    Node enlace;
+    T datos; 
+    Node nextNode;
 
     public Node(){
 
     }
-    public Node(T data){
-        this.data=data;
-        this.enlace=null;
+    public Node(T datos){
+        this.datos=datos;
+        this.nextNode=null;
     }
 
-    public Node(T data, Node enlace){
-        this.data=data;
-        this.enlace=enlace;
+    public Node(T datos, Node nextNode){
+        this.datos=datos;
+        this.nextNode=nextNode;
     }
-    public T getData(){
-        return this.data;
+    public T getdatos(){
+        return this.datos;
     }
-    public void setData(T data){
-        this.data=data;
+    public void setdatos(T datos){
+        this.datos=datos;
     }
     public Node<T> getNext(){
-        return enlace;
+        return nextNode;
     }
-    public void setNext(Node<T> enlace) {
-        this.enlace=enlace;
+    public void setNext(Node<T> nextNode) {
+        this.nextNode=nextNode;
     }
 
 }
