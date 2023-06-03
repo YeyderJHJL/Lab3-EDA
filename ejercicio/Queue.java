@@ -5,17 +5,23 @@ public class Queue<E> {
   public boolean add(E e) {
     Node<E> newNode = new Node<E>(e);
     if (head != null) {
-      tail.setNext(newNode);
-      tail = newNode;
+      this.tail.setNext(newNode);
+      this.tail = newNode;
       return true;
     } else {
-      head = newNode;
-      tail = newNode;
+      this.head = newNode;
+      this.tail = newNode;
       return true;
     }
   }
 
   public E element() {
-    return head.getdatos();
+    return this.head.getdatos();
+  }
+
+  public E poll() {
+    E headElement = this.head.getdatos();
+    this.head = this.head.getNext();
+    return headElement;
   }
 }
