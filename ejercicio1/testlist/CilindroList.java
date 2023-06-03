@@ -3,7 +3,7 @@ package testlist;
 
 import testlist.myExceptions.ExceptionNoFound;
 
-public class CilindroList <Integer> implements Comparable<CilindroList> {
+public class CilindroList <E> implements Comparable<CilindroList> {
         
         private NodeAltura head;
 
@@ -27,10 +27,17 @@ public class CilindroList <Integer> implements Comparable<CilindroList> {
                 return aux.getAltura();
         }
         
-        public NodeAltura push(NodeAltura e){
+        public E push(E e){
+
+                if(!(e instanceof Integer)){
+                        System.out.println("tipo de dato no válido...");
+                        return null;
+                }
+
+                NodeAltura elm = new NodeAltura((Integer)e);
                 NodeAltura aux = head;
-                e.setNext(aux);
-                head = e;
+                elm.setNext(aux);
+                head = elm;
                 
                 return e;
         }
