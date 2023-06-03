@@ -14,4 +14,8 @@ public class Queue<E> {
       return true;
     }
   }
+
+  public E element() {
+    return head.getdatos();
+  }
 }
