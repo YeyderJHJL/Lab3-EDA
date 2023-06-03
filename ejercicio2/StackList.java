@@ -12,14 +12,14 @@ public class StackList <E> implements Stack<E>{
 
     public E peek() throws ExceptionNoFound{
         if(this.head == null){
-            throw new ExceptionNoFound("El cilindro no tiene pilas, está vacia");
+            throw new ExceptionNoFound("Pila sin elementos, está vacia");
         }
         return head.getNode();
     }
 
     public E pop() throws ExceptionNoFound{
         if(this.head == null){
-            throw new ExceptionNoFound("El cilindro no tiene pilas, está vacia");
+            throw new ExceptionNoFound("Pila sin elementos, está vacia");
         }
         Node<E> aux = head;
         head = head.getNext();
