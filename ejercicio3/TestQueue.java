@@ -19,7 +19,7 @@ public class TestQueue<E> implements Queue<E> {
 
   public E element() throws ExceptionTheresAnError {
     if (this.head == null) {
-      throw new ExceptionTheresAnError("La cola esta vacia");
+      throw new ExceptionTheresAnError("No se puede observar la cabeza de la cola porque esta vacia");
     } else {
       return this.head.getdatos();
     }
@@ -70,7 +70,7 @@ public class TestQueue<E> implements Queue<E> {
         return headElement;
       }
     } else {
-      throw new ExceptionTheresAnError("La cola esta vacia");
+      throw new ExceptionTheresAnError("No se puede remover la cabeza de la cola porque esta vacia");
     }
   }
 }
