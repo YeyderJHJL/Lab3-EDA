@@ -1,5 +1,5 @@
 
-package testlist.myExceptions;
+package myExceptions;
 
 public class ExceptionNoFound extends Exception {
 

@@ -2,7 +2,7 @@ import testlist.myExceptions.ExceptionNoFound;
 
 public class StackList <E> implements Stack<E>{
     
-private Node<E> head;
+    private Node<E> head;
     private int size;
 
     public StackList() {
@@ -12,14 +12,14 @@ private Node<E> head;
 
     public E peek() throws ExceptionNoFound{
         if(this.head == null){
-            throw new ExceptionNoFound("El cilindro no tiene pilas, est· vacia");
+            throw new ExceptionNoFound("El cilindro no tiene pilas, est√° vacia");
         }
         return head.getNode();
     }
 
     public E pop() throws ExceptionNoFound{
         if(this.head == null){
-            throw new ExceptionNoFound("El cilindro no tiene pilas, est· vacia");
+            throw new ExceptionNoFound("El cilindro no tiene pilas, est√° vacia");
         }
         Node<E> aux = head;
         head = head.getNext();
@@ -36,14 +36,10 @@ private Node<E> head;
     }
 
     @SuppressWarnings("empty-statement")
-    public int search(Object o){
-        if(!(o instanceof Node)){
-            return -1;
-        }
-        
+    public int search(E o){
         Node<E> aux = head;
         int i = 0;
-        for(; aux != null && !aux.equals(o); aux = aux.getNext(), i++);
+        for(; aux != null && !aux.getNode().equals(o); aux = aux.getNext(), i++);
         if(aux != null){
             return i;
         }
@@ -63,5 +59,4 @@ private Node<E> head;
         }
         return ret; 
     }
-
 }
