@@ -70,7 +70,7 @@ public class TestQueue<E> implements Queue<E> {
         return headElement;
       }
     } else {
-      return null;
+      throw new ExceptionTheresAnError("La cola esta vacia");
     }
   }
 }
