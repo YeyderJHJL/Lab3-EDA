@@ -34,7 +34,8 @@ public class TestList {
             Pila.push("Jirafa");
             
             //metodo search() para obtener la poscion del elemento
-            System.out.println("La nueva Pila es: "+Pila);
+            System.out.println("\nLa nueva Pila es: "+Pila);
+            
             System.out.println("El elemento de la cima es: "+Pila.peek());
             System.out.println("Jirafa en la posicion : "+Pila.search("Jirafa"));
             System.out.println("Leon en la posicion : "+Pila.search("Leon"));
@@ -42,6 +43,12 @@ public class TestList {
             //retorna -1 si no esta en la Pila
             System.out.println("Mono en la posicion : "+Pila.search("Mono"));
             
+            System.out.println("Elemento retirado de la Pila: "+Pila.pop());
+            System.out.println("Elemento retirado de la Pila: "+Pila.pop());
+            System.out.println("Elemento retirado de la Pila: "+Pila.pop());
+            System.out.println("Elemento retirado de la Pila: "+Pila.pop());
+            System.out.println("\nLa Pila esta vacia?: "+Pila.isEmpty());
+            System.out.println("Elemento retirado de la Pila: "+Pila.pop());
             
         }catch(Exception err){
             System.out.println(err);
