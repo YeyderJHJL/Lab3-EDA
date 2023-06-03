@@ -3,7 +3,7 @@ package testlist;
 
 import testlist.myExceptions.ExceptionNoFound;
 
-public class CilindroList <Integer>  {
+public class CilindroList <Integer> implements Comparable<CilindroList> {
         
         private NodeAltura head;
 
@@ -11,20 +11,20 @@ public class CilindroList <Integer>  {
                 this.head = null;
         }
         
-        public String peek() throws ExceptionNoFound{
+        public int peek() throws ExceptionNoFound{
                 if(this.head == null){
                         throw new ExceptionNoFound("El cilindro no tiene pilas, está vacia");
                 }
-                return head.toString();
+                return head.getAltura();
         }
         
-        public String pop() throws ExceptionNoFound{
+        public int pop() throws ExceptionNoFound{
                 if(this.head == null){
                         throw new ExceptionNoFound("El cilindro no tiene pilas, está vacia");
                 }
                 NodeAltura aux = head;
                 head = head.getNext();
-                return aux.toString();
+                return aux.getAltura();
         }
         
         public NodeAltura push(NodeAltura e){
@@ -62,5 +62,21 @@ public class CilindroList <Integer>  {
                         aux = aux.getNext();
                 }
                 return ret; 
+        }
+        
+        public int sum(){
+                NodeAltura aux = head;
+                int suma = 0;
+                
+                while(aux != null){
+                        suma += aux.getAltura();
+                        aux = aux.getNext();
+                }
+                return suma;
+        }
+        
+        @Override
+        public int compareTo(CilindroList o){
+                return this.sum() - o.sum();
         }
 }
