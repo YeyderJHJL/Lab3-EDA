@@ -1,4 +1,4 @@
-import testlist.myExceptions.ExceptionNoFound;
+import myExceptions.ExceptionNoFound;
 
 public class StackList <E> implements Stack<E>{
     
@@ -36,7 +36,7 @@ public class StackList <E> implements Stack<E>{
     }
 
     @SuppressWarnings("empty-statement")
-    public int search(E o){
+    public int search(Object o){
         Node<E> aux = head;
         int i = 0;
         for(; aux != null && !aux.getNode().equals(o); aux = aux.getNext(), i++);
