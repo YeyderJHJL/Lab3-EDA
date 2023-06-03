@@ -1,6 +1,6 @@
 public class Prueba {
   public static void main(String[] args) {
-    TestQueue cola = new TestQueue<Integer>();
+    TestQueue<Integer> cola = new TestQueue<>();
 
     try {
 
