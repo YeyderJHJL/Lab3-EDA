@@ -20,8 +20,18 @@ public class Queue<E> {
   }
 
   public E poll() {
-    E headElement = this.head.getdatos();
-    this.head = this.head.getNext();
-    return headElement;
+    if (this.head != null) {
+      if (this.head.getNext() != null) {
+        E headElement = this.head.getdatos();
+        this.head = this.head.getNext();
+        return headElement;
+      } else {
+        E headElement = this.head.getdatos();
+        this.head = null;
+        return headElement;
+      }
+    } else {
+      return null;
+    }
   }
 }
