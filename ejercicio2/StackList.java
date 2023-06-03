@@ -36,7 +36,7 @@ public class StackList <E> implements Stack<E>{
     }
 
     @SuppressWarnings("empty-statement")
-    public int search(Object o){
+    public int search(E o){
         Node<E> aux = head;
         int i = 0;
         for(; aux != null && !aux.getNode().equals(o); aux = aux.getNext(), i++);
