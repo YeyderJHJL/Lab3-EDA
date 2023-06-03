@@ -1,8 +1,10 @@
-public class Queue<E> {
+import myExceptions.ExceptionTheresAnError;
+
+public class TestQueue<E> implements Queue<E> {
   private Node<E> head;
   private Node<E> tail;
 
-  public boolean add(E e) {
+  public boolean add(E e) throws ExceptionTheresAnError {
     Node<E> newNode = new Node<E>(e);
     if (head != null) {
       this.tail.setNext(newNode);
@@ -15,8 +17,12 @@ public class Queue<E> {
     }
   }
 
-  public E element() {
-    return this.head.getdatos();
+  public E element() throws ExceptionTheresAnError {
+    if (this.head == null) {
+      throw new ExceptionTheresAnError("La cola esta vacia");
+    } else {
+      return this.head.getdatos();
+    }
   }
 
   public E poll() {
@@ -52,7 +58,7 @@ public class Queue<E> {
     return this.head.getdatos();
   }
 
-  public E remove() {
+  public E remove() throws ExceptionTheresAnError {
     if (this.head != null) {
       if (this.head.getNext() != null) {
         E headElement = this.head.getdatos();
