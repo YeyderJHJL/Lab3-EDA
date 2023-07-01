@@ -1,4 +1,4 @@
-import testlist.myExceptions.ExceptionNoFound;
+import myExceptions.ExceptionNoFound;
 
 public class TestList {
     public static void main(String[] args) throws ExceptionNoFound {

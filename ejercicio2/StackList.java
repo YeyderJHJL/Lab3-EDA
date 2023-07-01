@@ -1,4 +1,4 @@
-import testlist.myExceptions.ExceptionNoFound;
+import myExceptions.ExceptionNoFound;
 
 public class StackList <E> implements Stack<E>{
     

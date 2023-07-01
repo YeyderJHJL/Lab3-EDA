@@ -1,4 +1,4 @@
-import testlist.myExceptions.ExceptionNoFound;
+import myExceptions.ExceptionNoFound;
 
 public interface Stack<E> {
   //metodos de Stack
